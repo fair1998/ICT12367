@@ -1,101 +1,76 @@
-{% extends "base.html"%}
+{% extends "base.html"%} {% block title %}
+<title>ลงทะเบียน</title>
 
-{% block title %}
-<title>form</title>
-<style>
-    /* ตกแต่ง Input ให้ดูพรีเมียม */
-    .form-control:focus,
-    .form-select:focus {
-        background-color: #fff !important;
-        border: 1px solid #0d6efd !important;
-        box-shadow: 0 0 0 0.25 red rgba(13, 110, 253, 0.1);
-        outline: 0;
-    }
+{% endblock %} {% block content %}
+<section class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-5">
+            <h2 class="text-center fw-bold text-primary mb-4">
+              <i class="bi bi-person-plus-fill me-2"></i>แบบฟอร์มลงทะเบียน
+            </h2>
+            <p class="text-center text-muted mb-4">กรุณากรอกข้อมูลให้ครบถ้วน</p>
 
-    /* ปรับความโค้งมนของปุ่ม */
-    .btn-primary {
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+            <form id="registrationForm">
+              <div class="mb-4">
+                <label for="name" class="form-label fw-semibold">
+                  <i class="bi bi-person-fill text-primary me-2"></i
+                  >ชื่อ-นามสกุล
+                </label>
+                <input
+                  type="text"
+                  class="form-control form-control-lg bg-light border-0"
+                  id="name"
+                  name="name"
+                  placeholder="กรอกชื่อ-นามสกุล"
+                  required
+                />
+              </div>
 
-    /* เอฟเฟกต์ยกตัวเมื่อเอาเมาส์วางบนปุ่ม */
-    .btn-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3) !important;
-    }
+              <div class="mb-4">
+                <label for="age" class="form-label fw-semibold">
+                  <i class="bi bi-calendar-fill text-primary me-2"></i>อายุ
+                </label>
+                <input
+                  type="number"
+                  class="form-control form-control-lg bg-light border-0"
+                  id="age"
+                  name="age"
+                  placeholder="กรอกอายุ"
+                  min="1"
+                  max="150"
+                  required
+                />
+              </div>
 
-    /* ไอคอนจาก Bootstrap Icons (แนะนำให้เรียกใช้ใน <head>) */
-    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css");
-</style>
-{% endblock %}
+              <div class="d-grid gap-3 mt-4">
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-lg fw-bold rounded-pill shadow-sm"
+                >
+                  <i class="bi bi-check-circle-fill me-2"></i>ลงทะเบียน
+                </button>
+                <button
+                  type="reset"
+                  class="btn btn-outline-secondary btn-lg fw-bold rounded-pill"
+                >
+                  <i class="bi bi-x-circle-fill me-2"></i>ล้างข้อมูล
+                </button>
+              </div>
+            </form>
 
-{% block content %}
-<section class="py-5 bg-light">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="card border-0 shadow-sm overflow-hidden">
-                    <div class="row g-0">
-
-                        <div class="col-md-5 bg-primary p-5 text-white">
-                            <h3 class="fw-bold mb-4">พูดคุยกับเรา</h3>
-                            <p class="mb-5 opacity-75">หากคุณมีคำถามหรือข้อสงสัย สามารถส่งข้อความหาเราได้ทันที
-                                ทีมงานจะติดต่อกลับโดยเร็วที่สุด</p>
-
-                            <div class="d-flex mb-3">
-                                <div class="me-3"><i class="bi bi-geo-alt-fill"></i></div>
-                                <p>123 ถนนสุขุมวิท, เขตวัฒนา, กรุงเทพฯ 10110</p>
-                            </div>
-                            <div class="d-flex mb-3">
-                                <div class="me-3"><i class="bi bi-envelope-fill"></i></div>
-                                <p>support@mybrand.com</p>
-                            </div>
-                            <div class="d-flex">
-                                <div class="me-3"><i class="bi bi-telephone-fill"></i></div>
-                                <p>02-123-4567</p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-7 p-5 bg-white">
-                            <form id="contactForm">
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <label class="form-label fw-semibold">ชื่อ-นามสกุล</label>
-                                        <input type="text" class="form-control bg-light border-0 p-3"
-                                            placeholder="สมชาย ใจดี" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label fw-semibold">อีเมล</label>
-                                        <input type="email" class="form-control bg-light border-0 p-3"
-                                            placeholder="name@example.com" required>
-                                    </div>
-                                    <div class="col-12">
-                                        <label class="form-label fw-semibold">หัวข้อที่ต้องการติดต่อ</label>
-                                        <select class="form-select bg-light border-0 p-3">
-                                            <option selected disabled>เลือกหัวข้อ...</option>
-                                            <option value="1">สอบถามราคาบริการ</option>
-                                            <option value="2">แจ้งปัญหาการใช้งาน</option>
-                                            <option value="3">ความร่วมมือทางธุรกิจ</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-12">
-                                        <label class="form-label fw-semibold">ข้อความของคุณ</label>
-                                        <textarea class="form-control bg-light border-0 p-3" rows="4"
-                                            placeholder="พิมพ์ข้อความที่นี่..."></textarea>
-                                    </div>
-                                    <div class="col-12 mt-4">
-                                        <button type="submit"
-                                            class="btn btn-primary w-100 py-3 fw-bold rounded-pill shadow-sm">
-                                            ส่งข้อความเลย <i class="bi bi-send-fill ms-2"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
+            <div class="alert alert-info border-0 mt-4" role="alert">
+              <small>
+                <i class="bi bi-info-circle-fill me-2"></i>
+                ข้อมูลของคุณจะถูกเก็บรักษาอย่างปลอดภัย
+              </small>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 {% endblock %}

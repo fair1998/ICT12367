@@ -1,9 +1,302 @@
-{% extends "base.html"%}
+{% extends "base.html"%} {% block title %}
+<title>Index</title>
 
-{% block title %}
-<title>index</title>
-{% endblock %}
+{% endblock %} {% block content %}
+<!-- Hero Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h1 class="display-3 fw-bold text-primary mb-4">
+          ยินดีต้อนรับสู่ <br />MYBRAND
+        </h1>
+        <p class="lead text-muted mb-4">
+          ค้นพบประสบการณ์ใหม่กับบริการที่ครบครันและทันสมัย
+          พร้อมดูแลคุณด้วยเทคโนโลยีชั้นนำและทีมงานมืออาชีพ
+        </p>
+        <div class="d-flex gap-3">
+          <a href="/form/" class="btn btn-primary btn-lg px-4 rounded-pill">
+            <i class="bi bi-person-plus-fill me-2"></i>เริ่มต้นใช้งาน
+          </a>
+          <a
+            href="/about/"
+            class="btn btn-outline-primary btn-lg px-4 rounded-pill"
+          >
+            <i class="bi bi-info-circle me-2"></i>เรียนรู้เพิ่มเติม
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <img
+          src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
+          alt="Hero Image"
+          class="img-fluid rounded-4 shadow-lg"
+        />
+      </div>
+    </div>
+  </div>
+</section>
 
-{% block content %}
-<div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore distinctio ea laudantium blanditiis temporibus quam deserunt, eius velit eum vel, voluptatem dignissimos, provident tempore nihil iure veritatis nulla officia. Nostrum.</div>
+<!-- Services Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold text-primary mb-3">บริการของเรา</h2>
+      <p class="lead text-muted">ครบครันทุกความต้องการของคุณ</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm hover-lift">
+          <img
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop"
+            class="card-img-top"
+            alt="Web Development"
+          />
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                <i class="bi bi-code-slash text-primary fs-4"></i>
+              </div>
+              <h5 class="card-title fw-bold mb-0">พัฒนาเว็บไซต์</h5>
+            </div>
+            <p class="card-text text-muted">
+              สร้างเว็บไซต์ที่ทันสมัยและรองรับทุกอุปกรณ์ด้วยเทคโนโลยีล่าสุด
+              ออกแบบให้ใช้งานง่ายและปลอดภัย
+            </p>
+            <ul class="list-unstyled small text-muted">
+              <li>
+                <i class="bi bi-check-circle-fill text-success me-2"></i
+                >Responsive Design
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill text-success me-2"></i>Modern
+                Framework
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill text-success me-2"></i>Fast
+                Performance
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm hover-lift">
+          <img
+            src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=400&h=250&fit=crop"
+            class="card-img-top"
+            alt="Design"
+          />
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                <i class="bi bi-palette text-primary fs-4"></i>
+              </div>
+              <h5 class="card-title fw-bold mb-0">ออกแบบ UI/UX</h5>
+            </div>
+            <p class="card-text text-muted">
+              ออกแบบอินเทอร์เฟซที่สวยงามและใช้งานง่าย
+              มุ่งเน้นประสบการณ์ผู้ใช้ที่ดีที่สุด
+            </p>
+            <ul class="list-unstyled small text-muted">
+              <li>
+                <i class="bi bi-check-circle-fill text-success me-2"></i
+                >User-Centered Design
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill text-success me-2"></i>Clean
+                Interface
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill text-success me-2"></i>Brand
+                Identity
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm hover-lift">
+          <img
+            src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop"
+            class="card-img-top"
+            alt="Mobile App"
+          />
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                <i class="bi bi-phone text-primary fs-4"></i>
+              </div>
+              <h5 class="card-title fw-bold mb-0">แอปมือถือ</h5>
+            </div>
+            <p class="card-text text-muted">
+              พัฒนาแอปพลิเคชันบนมือถือที่ใช้งานได้ทั้ง iOS และ Android
+              ด้วยประสิทธิภาพสูงสุด
+            </p>
+            <ul class="list-unstyled small text-muted">
+              <li>
+                <i class="bi bi-check-circle-fill text-success me-2"></i
+                >Cross-Platform
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill text-success me-2"></i>Native
+                Performance
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill text-success me-2"></i>Push
+                Notifications
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm hover-lift">
+          <img
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop"
+            class="card-img-top"
+            alt="Digital Marketing"
+          />
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                <i class="bi bi-megaphone text-primary fs-4"></i>
+              </div>
+              <h5 class="card-title fw-bold mb-0">การตลาดดิจิทัล</h5>
+            </div>
+            <p class="card-text text-muted">
+              วางแผนกลยุทธ์การตลาดออนไลน์ที่มีประสิทธิภาพ
+              เพิ่มยอดขายและสร้างแบรนด์ที่แข็งแกร่ง
+            </p>
+            <ul class="list-unstyled small text-muted">
+              <li>
+                <i class="bi bi-check-circle-fill text-success me-2"></i>SEO
+                Optimization
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill text-success me-2"></i>Social
+                Media
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill text-success me-2"></i>Content
+                Marketing
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm hover-lift">
+          <img
+            src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=250&fit=crop"
+            class="card-img-top"
+            alt="Cloud Service"
+          />
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                <i class="bi bi-cloud-upload text-primary fs-4"></i>
+              </div>
+              <h5 class="card-title fw-bold mb-0">บริการคลาวด์</h5>
+            </div>
+            <p class="card-text text-muted">
+              โซลูชั่นคลาวด์ที่ปลอดภัยและมีเสถียรภาพสูง
+              รองรับการทำงานได้ทุกที่ทุกเวลา
+            </p>
+            <ul class="list-unstyled small text-muted">
+              <li>
+                <i class="bi bi-check-circle-fill text-success me-2"></i>Secure
+                Storage
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill text-success me-2"></i>Auto
+                Backup
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill text-success me-2"></i>24/7
+                Access
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm hover-lift">
+          <img
+            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&h=250&fit=crop"
+            class="card-img-top"
+            alt="Support"
+          />
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                <i class="bi bi-headset text-primary fs-4"></i>
+              </div>
+              <h5 class="card-title fw-bold mb-0">ให้คำปรึกษา</h5>
+            </div>
+            <p class="card-text text-muted">
+              ทีมงานผู้เชี่ยวชาญพร้อมให้คำปรึกษาและสนับสนุน ตลอด 24
+              ชั่วโมงทุกวัน
+            </p>
+            <ul class="list-unstyled small text-muted">
+              <li>
+                <i class="bi bi-check-circle-fill text-success me-2"></i>Expert
+                Team
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill text-success me-2"></i>24/7
+                Support
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill text-success me-2"></i>Free
+                Consultation
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8">
+        <h2 class="display-5 fw-bold mb-3">พร้อมเริ่มต้นแล้วหรือยัง?</h2>
+        <p class="lead mb-4 opacity-75">
+          ลงทะเบียนวันนี้เพื่อรับสิทธิพิเศษและเริ่มใช้งานบริการของเราได้ทันที
+        </p>
+        <a href="/form/" class="btn btn-light btn-lg px-5 rounded-pill fw-bold">
+          <i class="bi bi-rocket-takeoff-fill me-2"></i>ลงทะเบียนเลย
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hover-lift {
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+  }
+</style>
 {% endblock %}
