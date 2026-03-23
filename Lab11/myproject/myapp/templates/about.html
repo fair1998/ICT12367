@@ -1,0 +1,89 @@
+{% extends "base.html"%} {% block title %}
+<title>about</title>
+
+{% endblock %} {% block content %}
+<section class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card border-0 shadow-sm overflow-hidden">
+          <div class="row g-0">
+            <div class="col-md-5 bg-primary p-5 text-white">
+              <h3 class="fw-bold mb-4">พูดคุยกับเรา</h3>
+              <p class="mb-5 opacity-75">
+                หากคุณมีคำถามหรือข้อสงสัย สามารถส่งข้อความหาเราได้ทันที
+                ทีมงานจะติดต่อกลับโดยเร็วที่สุด
+              </p>
+
+              <div class="d-flex mb-3">
+                <div class="me-3"><i class="bi bi-geo-alt-fill"></i></div>
+                <p>123 ถนนสุขุมวิท, เขตวัฒนา, กรุงเทพฯ 10110</p>
+              </div>
+              <div class="d-flex mb-3">
+                <div class="me-3"><i class="bi bi-envelope-fill"></i></div>
+                <p>support@mybrand.com</p>
+              </div>
+              <div class="d-flex">
+                <div class="me-3"><i class="bi bi-telephone-fill"></i></div>
+                <p>02-123-4567</p>
+              </div>
+            </div>
+
+            <div class="col-md-7 p-5 bg-white">
+              <form id="contactForm">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label fw-semibold">ชื่อ-นามสกุล</label>
+                    <input
+                      type="text"
+                      class="form-control bg-light border-0 p-3"
+                      placeholder="สมชาย ใจดี"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label fw-semibold">อีเมล</label>
+                    <input
+                      type="email"
+                      class="form-control bg-light border-0 p-3"
+                      placeholder="name@example.com"
+                      required
+                    />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label fw-semibold"
+                      >หัวข้อที่ต้องการติดต่อ</label
+                    >
+                    <select class="form-select bg-light border-0 p-3">
+                      <option selected disabled>เลือกหัวข้อ...</option>
+                      <option value="1">สอบถามราคาบริการ</option>
+                      <option value="2">แจ้งปัญหาการใช้งาน</option>
+                      <option value="3">ความร่วมมือทางธุรกิจ</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label fw-semibold">ข้อความของคุณ</label>
+                    <textarea
+                      class="form-control bg-light border-0 p-3"
+                      rows="4"
+                      placeholder="พิมพ์ข้อความที่นี่..."
+                    ></textarea>
+                  </div>
+                  <div class="col-12 mt-4">
+                    <button
+                      type="submit"
+                      class="btn btn-primary w-100 py-3 fw-bold rounded-pill shadow-sm"
+                    >
+                      ส่งข้อความเลย <i class="bi bi-send-fill ms-2"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

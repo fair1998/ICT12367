@@ -1,0 +1,65 @@
+{% extends "base.html" %} {% block title %}
+<title>ข้อมูลประชากร</title>
+
+{% endblock %} {% block content %}
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2 class="fw-bold text-primary">
+            <i class="bi bi-people-fill me-2"></i>ข้อมูลประชากร
+          </h2>
+        </div>
+
+        <div class="card shadow-sm">
+          <div class="card-body p-0">
+            <div class="table-responsive">
+              <table class="table table-hover table-striped mb-0">
+                <thead class="table-primary">
+                  <tr>
+                    <th scope="col" class="text-center">รหัสประชากร</th>
+                    <th scope="col">ชื่อประชากร</th>
+                    <th scope="col" class="text-center">อายุ</th>
+                    <th scope="col">วันที่เพิ่มข้อมูล</th>
+                    <th scope="col" class="text-center">แก้ไข</th>
+                    <th scope="col" class="text-center">ลบ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for person in all_Person %}
+
+                  <tr>
+                    <td class="text-center">{{ person.id }}</td>
+                    <td>{{ person.name }}</td>
+                    <td class="text-center">{{ person.age }}</td>
+                    <td>{{ person.date }}</td>
+                    <td class="text-center">
+                      <button
+                        class="btn btn-sm"
+                        style="background-color: pink; color: #fff"
+                      >
+                        <i class="bi bi-pencil-square"></i> แก้ไข
+                      </button>
+                    </td>
+                    <td class="text-center">
+                      <button
+                        class="btn btn-sm"
+                        style="background-color: orange; color: #fff"
+                      >
+                        <i class="bi bi-trash"></i> ลบ
+                      </button>
+                    </td>
+                  </tr>
+
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
