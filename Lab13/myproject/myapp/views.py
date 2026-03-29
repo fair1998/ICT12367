@@ -1,11 +1,21 @@
 from django.shortcuts import render , redirect
 from django.http import HttpResponse
 from myapp.models import Person
+from django.db.models import Q
 
 # Create your views here.
 def index(request):
-       all_Person = Person.objects.all()
-       return render(request, "index.html" , {"all_Person": all_Person})
+       search_query = request.GET.get('search', '')
+       
+       if search_query:
+           all_Person = Person.objects.filter(Q(name__icontains=search_query) | Q(age__icontains=search_query))
+       else:
+           all_Person = Person.objects.all()
+       
+       return render(request, "index.html" , {
+           "all_Person": all_Person,
+           "search_query": search_query
+       })
 
 def form(request, id=None):
     person = None
